@@ -1,0 +1,70 @@
+@import "../reset/normalize.css";
+@import "../reset/reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: #F7F7F7;
+}
+.container{
+    max-width: 1440px;
+    height: 700px;
+    margin: 55px 135px;
+}
+.container__flex{
+    display: flex;
+}
+.container form + form{
+    margin-left: 30px;
+}
+form{
+    width: 590px;
+    height: 570px;
+    background-color: #FFFFFF;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+input{
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+}
+h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1C1C1C;
+}
+.f1_row{
+    display: flex;
+}
+label{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    color: #1C1C1C;
+}
+
+form h1:first-child{
+    margin-bottom: 20px;
+}
+[lable] + [lable]{
+    margin-left: 12px;
+}
+fieldset + fieldset{
+    margin-top: 20px;
+}
+form p, span{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    color: #969696;
+}
+[lable] {
+    margin-bottom: 7px;
+}
