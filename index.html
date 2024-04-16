@@ -5,96 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>_</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="https://kit.fontawesome.com/64b5e13d9b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
 </header>
 <main>        
-    <section>
-        <div class="container">
-            <div class="container__flex">
-                <form action="/action_page.php" method="get">
-                    <h1>
-                        Create an Account
-                    </h1>
-                        <fieldset class="f1_row">
-                            <label for="f1_firstname">
-                                First name
-                                <input type="text" id="f1_firstname" name="f1_firstname"><br><br>
-                            </label>
-                            <label for="f1_lastname">
-                                Last name
-                                <input type="text" id="f1_lastname" name="f1_lastname"><br><br>    
-                            </label>
-                        </fieldset>
-                        <fieldset>
-                            <label for="email">
-                                Email
-                                <input type="text" id="f1_email" name="f1_email"><br><br>
-                            </label> 
-                                <span>
-                                    We'll never share your email with anyone else.
-                                </span>           
-                        </fieldset>
-                        <fieldset class="f1_row">
-                            <input type="radio" id="male" name="f1_sex" value="male" checked />
-                            <label for="male">Male</label>  
-                            <input type="radio" id="female" name="f1_sex" value="female" />
-                            <label for="female">Female</label>
-                        </fieldset>
-                      <input type="submit" value="Submit">
-                      <p>
-                        By clicking the 'Sign Up' button, you confirm that you accept our <br><a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.
-                      </p>
-                      <div class="f1_row">
-                        <p>
-                            Have an account?
-                        </p>
-                        <a href="">Log In</a>
-                      </div>
-                </form>
-
-                <form action="/action_page.php" method="get">
-                    <h1>
-                        Profile
-                    </h1>
-                    <div class="f2_row">
-                        <img src="" alt="">
-                        <div class="f2__row--file">
-                            <label for="myfile">Up to 1 MB (300x300 px)</label>
-                            <input type="file" id="myfile" name="myfile">    
+    <div class="container">
+        <div class="forms">
+            <section class="form">
+                <h1>
+                    Create an Account
+                </h1>
+                <form class="form__createanaccount" action="/action_page.php" method="get" target="_blank">
+                    <fieldset class="form__createanaccount--names">
+                        <div>
+                            <label for="fname">First Name</label><br>
+                            <input class="active" type="text" id="fname" name="fname"><br>
                         </div>
-                    </div>
-                    <label for="email">Email</label>
-                    <input type="text" id="f1_email" name="f1_email"><br><br>
-                    <p>
+                        <div>
+                            <label for="lname">Last Name</label><br>
+                            <input class="active" type="text" id="lname" name="lname">
+                        </div>
+                    </fieldset class="form__createanaccount--email">
+                    <label for="email">E-mail</label><br>
+                    <input class="active" type="emeil" id="emeil" name="email"><br>
+                    <p class="text-decoration">
                         We'll never share your email with anyone else.
                     </p>
-                    <div>
-                        <input type="radio" id="male" name="f1_sex" value="male" checked />
-                        <label for="male">Male</label>
-                      </div>
-                      <div>
-                        <input type="radio" id="female" name="f1_sex" value="female" />
-                        <label for="female">Female</label>
-                      </div>
-                      <input type="submit" value="Submit">
-
-                      <p>
-                        By clicking the 'Sign Up' button, you confirm that you accept our <br><a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.
-                      </p>
-                      <div class="f1_row">
-                        <p>
+                    <fieldset class="form__createanaccount--sex">
+                        <div>
+                            <input type="radio" id="male" name="sex" value="male">
+                            <label for="male">Male</label><br>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="sex" value="female">
+                            <label for="female">Female</label><br>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__createanaccount--place">
+                        <div class="flex">
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option disabled selected value> Select</option>
+                                <option value="ukraine">Ukraine</option>
+                                <option value="poland">Poland</option>
+                                <option value="italy">Italy</option>
+                                <option value="spain">Spain</option>
+                            </select>
+                        </div>
+                        <div class="flex">
+                            <label for="city">City</label>
+                            <textarea id="city" name="city" rows="1" cols="10">
+                            </textarea>
+                        </div>
+                    </fieldset>
+                    <button class="submit" type="submit">
+                        Sign Up
+                    </button>
+                    <p class="text-decoration">
+                        By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a>
+                         and <a href="#">Privacy Policy</a>.
+                    </p>
+                    <div class="bottom">
+                        <span>
                             Have an account?
-                        </p>
-                        <a href="">Log In</a>
-                      </div>
+                        </span>
+                        <a href="#">Log In</a>
+                    </div>
                 </form>
-
-            </div>
+            </section>
+            <section class="form">
+                <h1>
+                    Profile
+                </h1>
+                <form class="form__profile" action="/action_page.php" method="get" target="_blank">
+                    <fieldset>
+                        <div class="upload-form">
+                            <div class="preview">
+                              <img src="./images/Image.png" alt="Preview" class="preview-image">
+                            </div>
+                            <div class="upload-field">
+                              <input type="file" id="file-upload" accept="image/*">
+                              <label for="file-upload" class="upload-label">
+                                <img src="./images/svg/Photo Camera.svg" alt="Upload" class="upload-icon">
+                              </label>
+                              <span class="upload-info">Up to 1 MB (300x300 px)</span>
+                            </div>
+                            <button class="reset-button">
+                              <img src="./images/svg/Trash.svg" alt="Reset" class="reset-icon">
+                            </button>
+                          </div>
+                    </fieldset>
+                    <fieldset class="form__profile--name">
+                        <div>
+                            <label for="name">Name</label><br>
+                            <input type="text" id="name" name="name"><br>
+                        </div>
+                        <div>
+                            <label for="email">E-mail</label><br>
+                            <input type="emeil" id="emeil" name="email"><br>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__createanaccount--place">
+                        <div class="flex">
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option disabled selected value> Select</option>
+                                <option value="ukraine">Ukraine</option>
+                                <option value="poland">Poland</option>
+                                <option value="italy">Italy</option>
+                                <option value="spain">Spain</option>
+                            </select>
+                        </div>
+                        <div class="flex">
+                            <label for="city">City</label>
+                            <textarea id="city" name="city" rows="1" cols="10">
+                            </textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="flex">
+                            <label for="zipcode">Zip Code</label>
+                            <textarea id="zipcode" name="zipcode" rows="1" cols="10">
+                            </textarea>
+                        </div>
+                        <div class="flex">
+                            <label for="phonenumber">Phone Number</label>
+                            <textarea id="phonenumber" name="phonenumber" rows="1" cols="10">
+                            </textarea>
+                        </div>
+                    </fieldset>
+                    <button class="submit small" type="submit">
+                        Update
+                    </button>
+                </form>
+            </section>
         </div>
-    </section>
+    </div>
 </main>
 </body>
 <footer>
